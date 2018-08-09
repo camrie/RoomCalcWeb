@@ -9,10 +9,11 @@ var calc = function() {
     let electricity = document.getElementById("elec").value;
     console.log(rent_util);
     console.log(electricity);
-    // if(rent_util.trim() == '' || electricity.trim() == '') {
-    //     return "Please input a number"
-    // }
-    // else {
+     if(rent_util.trim() == '' || electricity.trim() == '') {
+         document.getElementById("value").innerHTML = "Please input a number"
+         return "Please input a number"
+     }
+     else {
         let rent_each = (rent_util - pet_rent) / numRoommates;
         let int_each = internet / numRoommates;
         let elec_each = electricity / numRoommates;
@@ -21,5 +22,5 @@ var calc = function() {
         document.getElementById("value").innerHTML = kev_total;
       //  document.getElementById("value").innerHTML = "test changed";
         return kev_total;
-    // }
+     }
 }
